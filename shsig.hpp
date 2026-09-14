@@ -5,21 +5,27 @@
 class shsig {
 	
 	
-	void firstSetup();
-	void loadDataFromConfig();
-	int checkForFirstSetup();
 
 	std::string srvHost = "localhost";
 	int srvPort = 8082;
 	std::string staticDir = "./htdocs";
 	std::string configDir = "./shsigConfig.json";
 
-	enum logLevel;
 
 
+
+protected:
+	enum logLevel {
+		debug,
+		info,
+		warn,
+		error,
+		raw
+	};
+	void firstSetup();
 	void log(logLevel logLevel, std::string msg);
-
-	public:
-		static void srvStart();
-		static void srvStop();
+	void srvStart();
+	void srvStop();
+public:
+	void loadDataFromConfig();
 };
