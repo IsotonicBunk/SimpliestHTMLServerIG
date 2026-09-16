@@ -17,10 +17,3 @@ void shsig::log(shsig::logLevel logLevel, std::string msg) {
 	return;
 }
 
-int main() {
-	cout << "Hello CMake." << endl;
-	shsig* Shsig;
-	Shsig->loadDataFromConfig();
-
-	return 0;
-}

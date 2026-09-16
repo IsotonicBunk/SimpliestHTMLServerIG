@@ -7,7 +7,7 @@ class shsig {
 	
 
 	std::string srvHost = "localhost";
-	int srvPort = 8082;
+	int srvPort = 8080;
 	std::string staticDir = "./htdocs";
 	std::string configDir = "./shsigConfig.json";
 
@@ -26,6 +26,7 @@ protected:
 	void log(logLevel logLevel, std::string msg);
 	void srvStart();
 	void srvStop();
-public:
-	void loadDataFromConfig();
+	bool loadDataFromConfig();
+	public:
+		int main();
 };
