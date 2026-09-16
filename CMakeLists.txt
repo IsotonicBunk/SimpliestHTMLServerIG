@@ -12,4 +12,3 @@ add_executable (SimpliestHTMLServerIG "shsigServer.cpp" "shsig.hpp" "shsigConfig
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET SimpliestHTMLServerIG PROPERTY CXX_STANDARD 20)
 endif()
-add_subdirectory("t")
